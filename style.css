@@ -1,0 +1,18 @@
+	body {
+		color: white; 
+		background: black;
+}
+
+h1, h2 {
+	color: green;
+	text-align: center;
+}
+
+i {
+	color: red;
+}
+
+img {
+	max-width: 50%; 
+	height: auto;
+}
