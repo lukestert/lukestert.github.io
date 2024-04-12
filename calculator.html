@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Race Predictor</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+ font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Race Predictor</h1>
+<p>This calculator attempts to predict race times for specific distances using a previous race result for a different distance. For example, you can input your 5K PR and see a predicted 10K time.</p>
+<p><b>This calculator adjusts predicted pace depending on the distance of the race being predicted. </b>This means that your prediction for a 100 meter race will have a much faster pace than your prediction for a marathon race.</p>
+<p>This calculator uses the formula</p><img src="formula.jpg">
+<p>This formula was created by Peter Riegel, and it is widely accepted as being fairly accurate.</p>
+<div style="width: 500px; height: 275px; border: 1px solid black;">
+<p><b>Calculator</b></p>
+<p>Fill out all fields, even if you just put a zero.</p>
+  <form>
+<label>Previous Race Time (hh:mm:ss)</label>
+  <div class="previous-time">
+    <input type="number" class="qty" id="time_hr" /> : <input type="number" class="qty" id="time_min" /> : <input type="number" class="qty" id="time_sec" />
+  </div>
+    <label>Previous Race Distance</label>
+  <div class="previous-distance">
+    <input type="number" class="qty" id="old-distance" /> 
+  <select name="distance-unit1" id="distance-unit1"> 
+    <option value="miles">miles</option> 
+    <option value="kilometers">kilometers</option> 
+  </select>
+    </div>
+  <div class="new-distance">
+    <label>New Race Distance</label>
+    <div></div>
+    <input type="number" class="qty" id="new-distance" /> 
+  <select name="distance-unit2" id="distance-unit2"> 
+    <option value="miles">miles</option> 
+    <option value="kilometers">kilometers</option> 
+  </select>
+  </div>
+  <div class="new-time">
+    <label>New Race Time (hh:mm:ss)</label>
+    <div></div>
+    <input type="number" class="qty" id="newtime_hr" disabled /> : <input type="number" class="qty" id="newtime_min" disabled /> : <input type="number" class="qty" id="newtime_sec" disabled />
+  </div>
+  <button type="button" id="calculate-button">Calculate Predicted Time</button>
+</form>
+</div>
+<script src="race-predictor.js"></script>
+</body>
+</html>
