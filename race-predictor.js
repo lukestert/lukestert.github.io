@@ -36,7 +36,7 @@ function calculatePredictedTime() {
     // Update the predicted time display (assuming element IDs haven't changed)
     document.getElementById("newtime_hr").value = predictedHours
     document.getElementById("newtime_min").value = predictedMinutes
-    document.getElementById("newtime_sec").value = predictedSeconds
+    document.getElementById("newtime_sec").value = Math.round(predictedSeconds)
   }
   
   // Add event listener to the button to call the function on click
